@@ -1,0 +1,13 @@
+{
+  "name": "Gosho",
+  "description": "Gosho a Url shotener coded in golang",
+  "keywords": [
+    "url shotener",
+    "golang",
+    "gosho",
+    "nader",
+    "Go"
+  ],
+  "website": "http://gosho.herokuapp.com",
+  "repository": "http://github.com/NaderJS/gosho"
+}

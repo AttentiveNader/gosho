@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gosho</title>
+	<meta name="description" content="Gosho shortener : a  url Shortener coded in golang the language of Google">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="/static/imgs/Go-Logo_Fuchsia.png"/>
+	<link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="loading">
+	<div class="circle"></div>
+</div>
+ <div class="container">	
+ 	<div class="header">
+ 		<div sty>
+ 			<h1>a Url Shortener coded in <a href="https://golang.org/">Go</a></h1>
+ 		</div>
+ 		<img src="/static/imgs/logo.png" title="Gosho - logo"  alt="Gosho - logo">
+ 	</div> 	
+
+	{{if .Err}}
+	<div class="error" id="servingErr" onclick='closeErr("servingErr")' >
+			<p>{{.ErrText}}</p>
+	</div>
+	{{end}}
+
+	<div id="respErr" class="error" onclick="closeErr('respErr')" >
+		<div id="shortenErr"></div>
+	</div>
+	<div class="input-url">
+		<input type="text" id="url" placeholder="long url"></input>
+		<button onclick="PostUrl()" style="float:right;">Get</button>
+	</div>
+	<div id="response">
+		
+	</div>
+	<div id="footer">
+		<p>developed by  <a href="http://github.com/NaderJS"> Nader Atef</a></p> 
+	</div>
+ </div>
+ 
+</body>
+	<script src="/static/js/validate.min.js"></script>
+	<script src="/static/js/axios.js"></script>
+	<script src="/static/js/index.js"></script>
+</html>
